@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
 import Resource from "./Resource";
+import topics from '../api/Api'
 
 const Topic = ({match}) => {
     const topic = topics.find(({id}) =>
@@ -10,7 +11,7 @@ const Topic = ({match}) => {
             <h1>Topic ID: {match.params.topicId}</h1>
             <h1>{topic.name}</h1>
             <p>{topic.description}</p>
-            <ul>
+            <ul className="list">
                 {topic.resources.map((sub) => (
                     <li key={sub.id}>
                         <Link to={

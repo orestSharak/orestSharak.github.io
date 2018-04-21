@@ -1,11 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router,Link, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import Home from './Home';
 import Schedule from './Schedule'
 import Topics from './Topics';
 
-
-class Main extends React.Component {
+class Header extends React.Component {
     render() {
         return (
             <Router>
@@ -19,10 +18,12 @@ class Main extends React.Component {
                     <Route exact path='/schedule' component={Schedule}/>
                     <Route path='/topics' component={Topics}/>
                 </div>
-
             </Router>
+
+
 
         )
     }
 }
-export default Main
+
+export default Header

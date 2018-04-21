@@ -1,7 +1,8 @@
 import React from 'react';
+import topics from '../api/Api';
 
 const Resource = ({match}) => {
-    const topic = topic.find(({ id }) => id === match.params.topicId)
+    const topic = topics.find(({ id }) => id === match.params.topicId)
         .resources.find(({ id }) => id === match.params.subId);
     return (
         <div>
