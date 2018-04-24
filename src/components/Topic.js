@@ -1,30 +1,29 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
-import Resource from "./Resource";
-import topics from '../api/Api'
+import topics from '../api/Api';
 
 const Topic = ({match}) => {
     const topic = topics.find(({id}) =>
-        id === match.params.topicId);
+        id === match.params.id);
+
     return (
         <div className="current">
-            <h1>Topic ID: {match.params.topicId}</h1>
             <h1>{topic.name}</h1>
             <p>{topic.description}</p>
+
             <ul className="list">
-                {topic.resources.map((sub) => (
-                    <li key={sub.id}>
-                        <Link to={
-                            `${match.url}/${sub.id}`}>
-                            {sub.name}
+                {topic.resources.map(i => (
+                    <li key={i.id}>
+                        <Link to={{
+                            pathname: `/resource/${i.id}`
+                        }}>
+                            {i.name}
                         </Link>
                     </li>
                 ))}
             </ul>
-            <Route path={`${match.path}/:subId`} component={Resource}/>
         </div>
     )
-
 };
 
 export default Topic;

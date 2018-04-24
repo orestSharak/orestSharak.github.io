@@ -6,6 +6,8 @@ import style from "./css/main.css";
 import Home from "./components/Home";
 import Schedule from "./components/Schedule";
 import Topics from "./components/Topics";
+import Topic from "./components/Topic";
+import Resource from "./components/Resource";
 
 class App extends React.Component {
     render() {
@@ -20,6 +22,8 @@ class App extends React.Component {
                     <Route exact path='/' component={Home}/>
                     <Route exact path='/schedule' component={Schedule}/>
                     <Route path='/topics' component={Topics}/>
+                    <Route path="/topic/:id" component={Topic}/>
+                    <Route path="/resource/:id" component={Resource}/>
                 </div>
             </Router>
         )
