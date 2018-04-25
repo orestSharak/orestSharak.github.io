@@ -1,0 +1,27 @@
+[
+  {
+    "name": "React Router",
+    "id": "react-router",
+    "description": "Declarative, component based routing for React"
+  },
+  {
+    "name": "React.js",
+    "id": "reactjs",
+    "description": "A JavaScript library for building user interfaces"
+  },
+  {
+    "name": "React Lifecycle Events",
+    "id": "react-lifecycle",
+    "description": "React Lifecycle events allow you to tie into specific phases of a components lifecycle"
+  },
+  {
+    "name": "React AHA Moments",
+    "id": "react-aha",
+    "description": "A collection of 'Aha' moments while learning React."
+  },
+  {
+    "name": "Functional Programming",
+    "id": "functional-programming",
+    "description": "In computer science, functional programming is a programming paradigm—a style of building"
+  }
+]

@@ -15,7 +15,7 @@ module.exports = {
                 use: [
                     {
                         loader: "html-loader",
-                        options: { minimize: true }
+                        options: {minimize: true}
                     }
                 ]
             },
@@ -25,6 +25,9 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        historyApiFallback: true
+    },
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/index.html",
@@ -33,6 +36,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
-        })
+        }),
+
     ]
 };

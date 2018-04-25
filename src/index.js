@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Bootstrap from "bootstrap-without-jquery"; // for feature bootstrap
@@ -7,9 +7,9 @@ import Home from "./components/Home";
 import Schedule from "./components/Schedule";
 import Topics from "./components/Topics";
 import Topic from "./components/Topic";
-import Resource from "./components/Resource";
+import News from "./api/News";
 
-class App extends React.Component {
+class App extends Component {
     render() {
         return (
             <Router>
@@ -19,11 +19,10 @@ class App extends React.Component {
                         <li><Link to='/schedule'>Schedule</Link></li>
                         <li><Link to='/topics'>Topics</Link></li>
                     </ul>
-                    <Route exact path='/' component={Home}/>
+                    <Route exact path='/' component={News}/>
                     <Route exact path='/schedule' component={Schedule}/>
                     <Route path='/topics' component={Topics}/>
                     <Route path="/topic/:id" component={Topic}/>
-                    <Route path="/resource/:id" component={Resource}/>
                 </div>
             </Router>
         )
